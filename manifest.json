@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Saver - Auto Blur Sensitive Info",
+  "version": "1.0.0",
+  "description": "Automatically blurs sensitive information (emails, phones, passwords, tokens) while you screen-share or stream.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-blur": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B"
+      },
+      "description": "Toggle blur on/off"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
